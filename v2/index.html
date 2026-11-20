@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trợ lý ảo PCCC – Đội CC và CNCH KV24</title>
+<meta name="description" content="Trang thông tin Trợ lý ảo hỏi đáp pháp luật, kiến thức PCCC và CNCH – Đội CC và CNCH Khu vực 24. Hệ thống đang tạm dừng để nâng cấp hạ tầng bảo mật.">
+<meta name="theme-color" content="#9e1218">
+<meta property="og:title" content="Trợ lý ảo PCCC – Đội CC và CNCH KV24">
+<meta property="og:description" content="Thông báo tạm dừng hệ thống hỏi đáp để nâng cấp hạ tầng bảo mật. Tin tức hoạt động PCCC vẫn cập nhật.">
+<meta property="og:image" content="https://mtminhpc.github.io/tro-ly-ai-pccc/qr-tro-ly-ai-pccc.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 3 7 12v18c0 16 11 27 25 31 14-4 25-15 25-31V12z' fill='%239e1218'/%3E%3Cpath d='M33 15c2 8 11 11 11 21a12 12 0 0 1-24 0c0-6 4-8 6-12 1 4 2 5 4 6-1-6 0-10 3-15z' fill='%23f2c230'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#9e1218; --red-dk:#7a0d12; --red-lt:#fbeeee; --gold:#f2c230;
+  --ink:#1d1d1f; --muted:#5f6368; --line:#dcdcdc; --line-2:#ececec;
+  --bg:#f3f3f3; --paper:#ffffff; --note:#fff8dc; --ok:#1e7b34; --warn:#a15c00;
+  --max:1140px; --g:16px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 Roboto,"Segoe UI",Arial,sans-serif;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--g)}
+h1,h2,h3,.serif{font-family:"Noto Serif",Georgia,"Times New Roman",serif}
+
+/* Top strip */
+.strip{background:var(--red-dk);color:#fff;font-size:12.5px}
+.strip .wrap{display:flex;justify-content:space-between;gap:12px;padding-top:6px;padding-bottom:6px;flex-wrap:wrap}
+.strip a{text-decoration:none;font-weight:700;color:var(--gold)}
+
+/* Header */
+.head{background:var(--paper);border-bottom:1px solid var(--line)}
+.head .wrap{display:flex;align-items:center;gap:14px;padding-top:14px;padding-bottom:14px}
+.badge{width:56px;height:56px;flex:none}
+.unit small{display:block;font-size:12px;font-weight:700;letter-spacing:.04em;color:var(--muted);text-transform:uppercase}
+.unit b{display:block;font-family:"Noto Serif",Georgia,serif;font-size:19px;line-height:1.25;color:var(--red);text-transform:uppercase}
+.unit span{display:block;font-size:13px;color:var(--muted)}
+.head .hot{margin-left:auto;display:none;text-align:right;text-decoration:none;border-left:1px solid var(--line);padding-left:16px}
+.head .hot small{display:block;font-size:12px;color:var(--muted)}
+.head .hot b{font-size:26px;color:var(--red);font-family:"Noto Serif",serif;line-height:1}
+
+/* Nav */
+.nav{background:var(--red);position:sticky;top:0;z-index:20;box-shadow:0 1px 0 rgba(0,0,0,.15)}
+.nav .wrap{display:flex;overflow-x:auto;scrollbar-width:none}
+.nav .wrap::-webkit-scrollbar{display:none}
+.nav a{color:#fff;text-decoration:none;font-size:13.5px;font-weight:700;text-transform:uppercase;padding:11px 14px;white-space:nowrap;border-right:1px solid rgba(255,255,255,.14)}
+.nav a:first-child{border-left:1px solid rgba(255,255,255,.14)}
+.nav a:hover,.nav a.on{background:var(--red-dk)}
+
+/* Notice line */
+.noteline{background:var(--note);border-bottom:1px solid #eadb9c;font-size:14px}
+.noteline .wrap{padding-top:9px;padding-bottom:9px}
+.noteline b{color:var(--red)}
+
+main{padding:20px 0 8px}
+.grid{display:grid;gap:20px}
+.box{background:var(--paper);border:1px solid var(--line)}
+.box-h{display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid var(--red);padding:0 14px}
+.box-h h2{margin:0;font-size:15px;text-transform:uppercase;color:var(--red);padding:10px 0;letter-spacing:.02em}
+.box-h a{font-size:13px;color:var(--muted);text-decoration:none}
+.box-h a:hover{color:var(--red);text-decoration:underline}
+.box-b{padding:16px 14px}
+
+/* Official notice */
+.doc{padding:22px 18px 24px}
+.doc .title{text-align:center;margin-bottom:16px}
+.doc .title h1{margin:0;font-size:22px;letter-spacing:.06em;color:var(--red)}
+.doc .title p{margin:4px auto 0;font-weight:700;max-width:560px;font-size:15px}
+.doc .title hr{width:120px;border:0;border-top:1px solid var(--ink);margin:10px auto 0}
+.doc p{margin:0 0 10px;text-align:justify}
+.doc ol{margin:0 0 10px;padding-left:22px}
+.doc ol li{margin-bottom:4px}
+.sign{margin-top:14px;display:flex;justify-content:flex-end}
+.sign div{text-align:center;font-size:14px}
+.sign i{display:block;color:var(--muted)}
+.sign b{display:block;margin-top:2px;text-transform:uppercase}
+table.st{width:100%;border-collapse:collapse;font-size:14px;margin:6px 0 12px}
+table.st th,table.st td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+table.st th{background:#f7f7f7;font-weight:700}
+.s-ok{color:var(--ok);font-weight:700}
+.s-run{color:var(--warn);font-weight:700}
+.s-wait{color:var(--muted);font-weight:700}
+.emerg{display:flex;gap:12px;align-items:center;border:1px solid #e3b4b6;background:var(--red-lt);padding:10px 12px;margin-top:6px}
+.emerg b{font-size:28px;color:var(--red);font-family:"Noto Serif",serif;line-height:1}
+.emerg span{font-size:14px}
+.btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:8px 14px;border:0;cursor:pointer}
+.btn:hover{background:var(--red-dk)}
+.btn.ghost{background:#fff;color:var(--red);border:1px solid var(--red)}
+
+/* Latest list */
+.latest{list-style:none;margin:0;padding:0}
+.latest li{border-bottom:1px dotted var(--line)}
+.latest li:last-child{border-bottom:0}
+.latest a{display:flex;gap:10px;padding:10px 14px;text-decoration:none}
+.latest a:hover .t{color:var(--red)}
+.latest .th{width:92px;height:62px;flex:none;background:#ddd;object-fit:cover}
+.latest .t{font-size:14px;font-weight:500;line-height:1.4;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.latest .d{font-size:12px;color:var(--muted);margin-top:2px}
+
+/* Assistant */
+.about p{margin:0 0 10px}
+.about ul{margin:0 0 12px;padding-left:20px}
+.about ul li{margin-bottom:4px}
+.src{font-size:13.5px;background:#fafafa;border:1px solid var(--line-2);padding:10px 12px}
+.chat{border:1px solid var(--line);background:#fafafa;display:flex;flex-direction:column}
+.chat-h{display:flex;justify-content:space-between;align-items:center;padding:9px 12px;border-bottom:1px solid var(--line);background:#fff;font-size:14px}
+.chat-h b{color:var(--red)}
+.chat-h span{font-size:12px;color:var(--warn);font-weight:700}
+.msgs{padding:12px;display:flex;flex-direction:column;gap:10px;font-size:14px}
+.m{max-width:88%;padding:9px 11px;border:1px solid var(--line);background:#fff}
+.m.u{align-self:flex-end;background:#eef3fb;border-color:#d2deef}
+.m small{display:block;margin-top:6px;color:var(--muted);font-size:12.5px}
+.m .ref{display:block;margin-top:6px;font-size:12.5px;border-left:3px solid var(--red);padding-left:8px;color:#333}
+.inp{display:flex;border-top:1px solid var(--line);background:#fff}
+.inp input{flex:1;min-width:0;border:0;padding:11px 12px;font:inherit;font-size:14px;background:#f5f5f5;color:var(--muted)}
+.inp button{border:0;background:#bdbdbd;color:#fff;font-weight:700;padding:0 16px;font:inherit;font-size:14px;cursor:not-allowed}
+
+/* News grid */
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.filters button{font:inherit;font-size:13px;border:1px solid var(--line);background:#fff;padding:4px 10px;cursor:pointer;color:var(--ink)}
+.filters button.on{background:var(--red);border-color:var(--red);color:#fff}
+.news{display:grid;gap:16px}
+.card{display:block;text-decoration:none;background:#fff;border:1px solid var(--line-2)}
+.card:hover h3{color:var(--red)}
+.card .im{aspect-ratio:16/10;background:#ddd;overflow:hidden}
+.card .im img{width:100%;height:100%;object-fit:cover}
+.card .tx{padding:10px 12px 12px}
+.card .meta{font-size:12px;color:var(--muted);display:flex;gap:8px}
+.card .meta em{font-style:normal;color:var(--red);font-weight:700}
+.card h3{font-size:15.5px;line-height:1.4;margin:4px 0 6px}
+.card p{font-size:13.5px;color:var(--muted);margin:0}
+.fallback{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:#e9e2e2;color:var(--red);font-weight:700;font-size:13px}
+
+/* Bottom boxes */
+.trio{display:grid;gap:20px}
+.qr{display:flex;gap:14px;align-items:center}
+.qr img{width:120px;border:1px solid var(--line)}
+.qr p{margin:0;font-size:14px}
+.qr code{font-size:12.5px;word-break:break-all;color:var(--muted)}
+
+footer{background:var(--red-dk);color:#f3dede;font-size:13.5px;margin-top:24px}
+footer .wrap{padding-top:20px;padding-bottom:20px;display:grid;gap:14px}
+footer b{color:#fff}
+footer a{color:var(--gold)}
+.foot-b{background:#5e0a0e;font-size:12.5px;color:#d9bcbc}
+.foot-b .wrap{padding-top:9px;padding-bottom:9px}
+
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%) translateY(30px);opacity:0;background:#222;color:#fff;padding:10px 16px;font-size:14px;max-width:calc(100% - 32px);transition:.25s;z-index:60;pointer-events:none}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+@media (min-width:640px){
+  .news{grid-template-columns:repeat(2,1fr)}
+  .head .hot{display:block}
+  .doc{padding:28px 32px 30px}
+}
+@media (min-width:960px){
+  .grid.main{grid-template-columns:2fr 1fr}
+  .grid.two{grid-template-columns:1.1fr 1fr}
+  .news{grid-template-columns:repeat(3,1fr)}
+  .trio{grid-template-columns:repeat(3,1fr)}
+  footer .wrap{grid-template-columns:2fr 1fr}
+  .unit b{font-size:22px}
+}
+</style>
+</head>
+<body>
+
+<div class="strip"><div class="wrap">
+  <span>CÔNG AN THÀNH PHỐ HỒ CHÍ MINH · PHÒNG CẢNH SÁT PCCC VÀ CNCH</span>
+  <span>Báo cháy, cứu nạn cứu hộ: <a href="tel:114">114</a></span>
+</div></div>
+
+<header class="head"><div class="wrap">
+  <svg class="badge" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 3 7 12v18c0 16 11 27 25 31 14-4 25-15 25-31V12z" fill="#9e1218"/><path d="M32 7.5 11 15v15c0 13.5 9 23 21 26.6C44 53 53 43.5 53 30V15z" fill="none" stroke="#f2c230" stroke-width="1.6"/><path d="M33 16c2 8 11 11 11 21a12 12 0 0 1-24 0c0-6 4-8 6-12 1 4 2 5 4 6-1-6 0-10 3-15z" fill="#f2c230"/></svg>
+  <div class="unit">
+    <small>Phòng Cảnh sát PCCC và CNCH</small>
+    <b>Đội CC và CNCH Khu vực 24</b>
+    <span>Trang thông tin Trợ lý ảo hỏi đáp pháp luật, kiến thức PCCC và CNCH</span>
+  </div>
+  <a class="hot" href="tel:114"><small>Đường dây nóng</small><b>114</b></a>
+</div></header>
+
+<nav class="nav" aria-label="Điều hướng"><div class="wrap">
+  <a href="#thong-bao" class="on">Thông báo</a>
+  <a href="#tro-ly">Trợ lý ảo</a>
+  <a href="#tin-tuc">Tin tức – Hoạt động</a>
+  <a href="#ho-tro">Hỗ trợ</a>
+</div></nav>
+
+<div class="noteline"><div class="wrap">
+  <b>Thông báo:</b> Chức năng hỏi đáp đang tạm dừng để nâng cấp hạ tầng bảo mật. Chuyên mục tin tức vẫn cập nhật bình thường.
+</div></div>
+
+<main><div class="wrap">
+
+  <div class="grid main">
+    <!-- Official notice -->
+    <section class="box" id="thong-bao">
+      <div class="doc">
+        <div class="title">
+          <h1>THÔNG BÁO</h1>
+          <p>Về việc tạm dừng hệ thống Trợ lý ảo hỏi đáp pháp luật PCCC và CNCH để nâng cấp hạ tầng bảo mật</p>
+          <hr>
+        </div>
+        <p>Trong quá trình rà soát, kiểm thử trước khi đưa vào sử dụng rộng rãi, Đội CC và CNCH Khu vực 24 xác định một số nội dung cần tiếp tục nâng cấp về an ninh, an toàn thông tin. Để bảo đảm an toàn dữ liệu của người dân và độ chính xác của thông tin pháp luật được cung cấp, đơn vị tạm dừng chức năng hỏi đáp để thực hiện các nội dung sau:</p>
+        <table class="st">
+          <thead><tr><th>Nội dung nâng cấp</th><th style="width:34%">Tình trạng</th></tr></thead>
+          <tbody>
+            <tr><td>Bảo vệ khóa truy cập, chuyển xử lý qua máy chủ trung gian</td><td class="s-ok">Đã hoàn thành</td></tr>
+            <tr><td>Giới hạn tần suất truy cập, chống gửi câu hỏi hàng loạt</td><td class="s-ok">Đã hoàn thành</td></tr>
+            <tr><td>Lọc nội dung đầu vào, chống tấn công chèn lệnh</td><td class="s-run">Đang thực hiện</td></tr>
+            <tr><td>Mã hóa, ẩn danh dữ liệu câu hỏi của người dân</td><td class="s-wait">Chờ kiểm thử</td></tr>
+          </tbody>
+        </table>
+        <p>Hệ thống sẽ hoạt động trở lại sau khi hoàn tất kiểm thử và thẩm định an toàn thông tin. Đơn vị sẽ thông báo trên trang này khi có lịch chính thức.</p>
+        <p>Rất mong nhận được sự thông cảm của người dân và doanh nghiệp.</p>
+        <div class="emerg"><b>114</b><span>Khi xảy ra cháy, nổ hoặc sự cố cần cứu nạn, cứu hộ, đề nghị gọi ngay số <a href="tel:114"><strong>114</strong></a> (miễn phí, 24/24 giờ).</span></div>
+        <div class="sign"><div><i>Tam Thắng, ngày 20 tháng 11 năm 2026</i><b>Đội CC và CNCH Khu vực 24</b></div></div>
+      </div>
+    </section>
+
+    <!-- Latest -->
+    <aside class="box">
+      <div class="box-h"><h2>Tin mới</h2><a href="#tin-tuc">Xem thêm</a></div>
+      <ul class="latest" id="latest"></ul>
+    </aside>
+  </div>
+
+  <!-- Assistant -->
+  <section class="box" id="tro-ly" style="margin-top:20px">
+    <div class="box-h"><h2>Trợ lý ảo hỏi đáp pháp luật PCCC</h2></div>
+    <div class="box-b grid two">
+      <div class="about">
+        <p>Trợ lý ảo là công trình thi đua của Đội CC và CNCH Khu vực 24 trong phong trào <b>“Ba nhất: Kỷ luật nhất – Trung thành nhất – Gần dân nhất”</b> năm 2026, giúp người dân, doanh nghiệp tra cứu nhanh quy định về phòng cháy, chữa cháy và cứu nạn, cứu hộ bằng câu hỏi thông thường.</p>
+        <ul>
+          <li>Trả lời dựa trên văn bản pháp luật đã được cán bộ chuyên môn kiểm duyệt, không tự suy diễn.</li>
+          <li>Mỗi câu trả lời ghi rõ văn bản, Điều, Khoản để người hỏi đối chiếu.</li>
+          <li>Câu hỏi chưa có dữ liệu được ghi nhận để cán bộ bổ sung định kỳ.</li>
+          <li>Dùng được trên điện thoại và máy tính, không cần cài đặt.</li>
+        </ul>
+        <div class="src"><b>Dữ liệu tra cứu:</b> Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ số 55/2024/QH15; Nghị định số 105/2025/NĐ-CP; các thông tư, quy chuẩn, tiêu chuẩn kỹ thuật hiện hành – được cập nhật khi có văn bản mới hoặc văn bản hết hiệu lực.</div>
+      </div>
+      <div class="chat" aria-label="Minh họa giao diện hỏi đáp">
+        <div class="chat-h"><b>Hỏi đáp PCCC</b><span>Tạm dừng – đang nâng cấp</span></div>
+        <div class="msgs">
+          <div class="m">Chào anh/chị. Anh/chị cần hỏi về quy định PCCC nào?</div>
+          <div class="m u">Nhà trọ 10 phòng cần trang bị những gì về PCCC?</div>
+          <div class="m">Nhà trọ cần bảo đảm lối thoát nạn thông thoáng, trang bị bình chữa cháy, thiết bị báo cháy phù hợp và có nội quy, biển chỉ dẫn. Yêu cầu cụ thể phụ thuộc số tầng, diện tích và số người ở.
+            <span class="ref">Luật PCCC và CNCH số 55/2024/QH15<br>Nghị định 105/2025/NĐ-CP</span>
+            <small>Nội dung minh họa, không có giá trị pháp lý.</small>
+          </div>
+        </div>
+        <form class="inp" onsubmit="return locked(event)">
+          <input type="text" placeholder="Chức năng hỏi đáp đang tạm dừng" aria-label="Ô nhập câu hỏi (đang tạm dừng)" readonly onclick="locked(event)">
+          <button type="submit">Gửi</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- News -->
+  <section class="box" id="tin-tuc" style="margin-top:20px">
+    <div class="box-h"><h2>Tin tức – Hoạt động PCCC</h2><a href="https://pccc-congan.hochiminhcity.gov.vn/tin-tuc" target="_blank" rel="noopener">Trang PC07</a></div>
+    <div class="box-b">
+      <div class="filters" id="filters"></div>
+      <div class="news" id="news"></div>
+      <p style="margin:16px 0 0;font-size:13px;color:var(--muted)">Tin bài thuộc Trang thông tin điện tử Phòng Cảnh sát PCCC và CNCH – Công an TP. Hồ Chí Minh. Bấm vào tin để đọc bài gốc.</p>
+    </div>
+  </section>
+
+  <!-- Support -->
+  <div class="trio" id="ho-tro" style="margin-top:20px">
+    <section class="box">
+      <div class="box-h"><h2>Khẩn cấp</h2></div>
+      <div class="box-b">
+        <p style="margin:0 0 10px">Báo cháy, tai nạn, sự cố cần cứu nạn, cứu hộ:</p>
+        <a class="btn" href="tel:114">Gọi 114</a>
+      </div>
+    </section>
+    <section class="box">
+      <div class="box-h"><h2>Mã truy cập</h2></div>
+      <div class="box-b qr">
+        <img src="../qr-tro-ly-ai-pccc.png" alt="Mã QR truy cập trang Trợ lý ảo PCCC" width="120" height="142">
+        <p>Quét mã để mở trang trên điện thoại.<br><code>mtminhpc.github.io/tro-ly-ai-pccc</code></p>
+      </div>
+    </section>
+    <section class="box">
+      <div class="box-h"><h2>Tiến độ công trình</h2></div>
+      <div class="box-b" style="font-size:14px">
+        <div>GĐ1 · 02–03/2026 · Hạ tầng, dữ liệu gốc – <span class="s-ok">Xong</span></div>
+        <div>GĐ2 · 04–06/2026 · Giao diện, truy xuất – <span class="s-ok">Xong</span></div>
+        <div>GĐ3 · 07–09/2026 · Tinh chỉnh, thử nghiệm – <span class="s-ok">Xong</span></div>
+        <div>GĐ4 · 10/2026 – nay · Nâng cấp bảo mật – <span class="s-run">Đang làm</span></div>
+      </div>
+    </section>
+  </div>
+
+</div></main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <b>ĐỘI CHỮA CHÁY VÀ CỨU NẠN, CỨU HỘ KHU VỰC 24</b><br>
+      Phòng Cảnh sát PCCC và CNCH – Công an TP. Hồ Chí Minh<br>
+      Địa bàn: phường Tam Thắng, TP. Hồ Chí Minh
+    </div>
+    <div>Đường dây nóng: <a href="tel:114"><b>114</b></a><br>Tin tức: <a href="https://pccc-congan.hochiminhcity.gov.vn/tin-tuc" target="_blank" rel="noopener">pccc-congan.hochiminhcity.gov.vn</a></div>
+  </div>
+  <div class="foot-b"><div class="wrap">Công trình thi đua “Ba nhất” năm 2026 · <a href="../">Xem giao diện bản 1</a></div></div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  var BASE="https://pccc-congan.hochiminhcity.gov.vn";
+  var NEWS=[
+    {slug:"tong-ra-soat-tuyen-truyen-an-toan-pccc-trong-su-2611200212",date:"20/11/2026",tag:"Tuyên truyền",title:"Tổng rà soát, tuyên truyền an toàn PCCC trong sử dụng điện sinh hoạt và sản xuất tại các khu dân cư, nhà trọ, nhà ở kết hợp sản xuất kinh doanh",img:"/image/journal/article?img_id=410887&t=1795140785209",sum:"Rà soát hệ thống điện, hướng dẫn người dân sử dụng điện an toàn tại khu dân cư, nhà trọ và nhà ở kết hợp kinh doanh."},
+    {slug:"to-chuc-le-ra-quan-cong-tac-phong-ngua-chay-2611190812",date:"19/11/2026",tag:"Hoạt động",title:"Tổ chức lễ ra quân công tác phòng ngừa cháy, nổ do sự cố hệ thống, thiết bị điện",img:"/image/journal/article?img_id=410340&t=1795075942597",sum:"Ra quân đợt cao điểm kiểm tra, hướng dẫn phòng ngừa cháy nổ do hệ thống và thiết bị điện."},
+    {slug:"co-so-san-xuat-kinh-doanh-can-chu-dong-kiem-2611190806",date:"19/11/2026",tag:"Khuyến cáo",title:"Cơ sở sản xuất, kinh doanh cần chủ động kiểm tra, duy trì các điều kiện an toàn PCCC",img:"/image/journal/article?img_id=410300&t=1795075602143",sum:"Chủ cơ sở cần thường xuyên tự kiểm tra, bảo dưỡng phương tiện, duy trì điều kiện an toàn PCCC."},
+    {slug:"tang-cuong-cong-tac-quan-ly-nha-nuoc-ve-pccc-2611180054",date:"18/11/2026",tag:"Quản lý nhà nước",title:"Tăng cường công tác quản lý nhà nước về PCCC và CNCH",img:"/image/journal/article?img_id=409589&t=1795131650646",sum:"Nâng cao trách nhiệm của chính quyền cơ sở trong công tác PCCC và cứu nạn, cứu hộ."},
+    {slug:"sau-vu-no-khi-gas-tai-tan-thuan-tp.hcm-tang-2611161431",date:"16/11/2026",tag:"Cảnh báo",title:"Sau vụ nổ khí gas tại Tân Thuận: TP.HCM tăng cường kiểm tra, siết chặt điều kiện an toàn tại các cửa hàng kinh doanh gas",img:"/documents/32724/181841/anh.jpg/599fe669-caaf-accd-abe8-b8eab57e3b6b?version=1.0&t=1779847232679&imagePreview=1",sum:"Tăng cường kiểm tra cửa hàng kinh doanh khí gas, yêu cầu khắc phục ngay các tồn tại."},
+    {slug:"bao-ve-an-ninh-du-lieu-cat-giam-toi-da-2611020702",date:"02/11/2026",tag:"An ninh dữ liệu",title:"Bảo vệ an ninh dữ liệu, cắt giảm tối đa thủ tục hành chính không cần thiết",img:"/image/journal/article?img_id=382243&t=1795151322687",sum:"Bảo đảm an toàn dữ liệu đồng thời tinh gọn thủ tục cho người dân, doanh nghiệp."},
+    {slug:"thuc-tap-phuong-an-chua-chay-va-cnch-cap-bo-2611010320",date:"01/11/2026",tag:"Diễn tập",title:"Thực tập phương án chữa cháy và CNCH cấp Bộ tại Công ty TNHH Hóa dầu Long Sơn",img:"/image/journal/article?img_id=381494&t=1795168485827",sum:"Thực tập quy mô lớn, kiểm nghiệm khả năng phối hợp, chỉ huy xử lý cháy tại khu hóa dầu."},
+    {slug:"tang-cuong-phoi-hop-lien-nganh-phong-ngua-chay-no-2610230329",date:"23/10/2026",tag:"Phối hợp",title:"Tăng cường phối hợp liên ngành, phòng ngừa cháy, nổ do điện ngay từ cơ sở",img:"/image/journal/article?img_id=365480&t=1795168485844",sum:"Phối hợp ngành điện và địa phương để phát hiện sớm nguy cơ cháy do điện từ cơ sở."},
+    {slug:"cong-an-tphcm-ra-mat-to-tiep-nhan-xu-ly-2610200606",date:"20/10/2026",tag:"Khoa học – Công nghệ",title:"Công an TP.HCM ra mắt “Tổ tiếp nhận, xử lý thông tin khẩn cấp” và “Câu lạc bộ Khoa học – Công nghệ”",img:"/image/journal/article?img_id=362655&t=1795167346553",sum:"Hai mô hình mới nhằm rút ngắn thời gian xử lý tin báo khẩn cấp, đẩy mạnh ứng dụng công nghệ."},
+    {slug:"hop-trien-khai-kich-ban-dien-tap-phuong-an-chua-2610150700",date:"15/10/2026",tag:"Diễn tập",title:"Họp triển khai kịch bản diễn tập phương án chữa cháy và CNCH tại Công ty TNHH Hóa dầu Long Sơn",img:"/image/journal/article?img_id=354743&t=1795151817059",sum:"Thống nhất kịch bản, phân công nhiệm vụ chuẩn bị diễn tập chữa cháy và CNCH."}
+  ];
+  function esc(s){return s.replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+  function img(n,cls){return '<img class="'+cls+'" src="'+BASE+n.img+'" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML=\'<div class=&quot;fallback '+cls+'&quot;>PCCC</div>\'">'}
+  function url(n){return BASE+"/w/"+n.slug}
+
+  document.getElementById("latest").innerHTML=NEWS.slice(0,6).map(function(n){
+    return '<li><a href="'+url(n)+'" target="_blank" rel="noopener">'+img(n,"th")+'<div><div class="t">'+esc(n.title)+'</div><div class="d">'+n.date+'</div></div></a></li>';
+  }).join("");
+
+  var tags=["Tất cả"];NEWS.forEach(function(n){if(tags.indexOf(n.tag)<0)tags.push(n.tag)});
+  var f=document.getElementById("filters");
+  f.innerHTML=tags.map(function(t,i){return '<button type="button" class="'+(i?"":"on")+'" data-t="'+esc(t)+'">'+esc(t)+'</button>'}).join("");
+  function render(t){
+    document.getElementById("news").innerHTML=NEWS.filter(function(n){return t==="Tất cả"||n.tag===t}).map(function(n){
+      return '<a class="card" href="'+url(n)+'" target="_blank" rel="noopener"><div class="im">'+img(n,"")+'</div><div class="tx"><div class="meta"><em>'+esc(n.tag)+'</em><span>'+n.date+'</span></div><h3>'+esc(n.title)+'</h3><p>'+esc(n.sum)+'</p></div></a>';
+    }).join("");
+  }
+  f.addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;[].forEach.call(f.children,function(x){x.classList.toggle("on",x===b)});render(b.getAttribute("data-t"))});
+  render("Tất cả");
+
+  var to;window.locked=function(e){if(e)e.preventDefault();var t=document.getElementById("toast");t.textContent="Chức năng hỏi đáp đang tạm dừng để nâng cấp bảo mật. Vui lòng quay lại sau.";t.classList.add("show");clearTimeout(to);to=setTimeout(function(){t.classList.remove("show")},2600);return false};
+
+  var links=[].slice.call(document.querySelectorAll(".nav a"));
+  window.addEventListener("scroll",function(){var y=scrollY+90,cur=links[0];links.forEach(function(a){var s=document.querySelector(a.getAttribute("href"));if(s&&s.offsetTop<=y)cur=a});links.forEach(function(a){a.classList.toggle("on",a===cur)})},{passive:true});
+})();
+</script>
+</body>
+</html>
