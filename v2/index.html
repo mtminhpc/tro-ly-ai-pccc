@@ -103,23 +103,39 @@ table.st th{background:#f7f7f7;font-weight:700}
 .latest .t{font-size:14px;font-weight:500;line-height:1.4;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .latest .d{font-size:12px;color:var(--muted);margin-top:2px}
 
-/* Assistant */
-.about p{margin:0 0 10px}
-.about ul{margin:0 0 12px;padding-left:20px}
-.about ul li{margin-bottom:4px}
-.src{font-size:13.5px;background:#fafafa;border:1px solid var(--line-2);padding:10px 12px}
-.chat{border:1px solid var(--line);background:#fafafa;display:flex;flex-direction:column}
-.chat-h{display:flex;justify-content:space-between;align-items:center;padding:9px 12px;border-bottom:1px solid var(--line);background:#fff;font-size:14px}
-.chat-h b{color:var(--red)}
-.chat-h span{font-size:12px;color:var(--warn);font-weight:700}
-.msgs{padding:12px;display:flex;flex-direction:column;gap:10px;font-size:14px}
-.m{max-width:88%;padding:9px 11px;border:1px solid var(--line);background:#fff}
+/* Assistant – center stage */
+.hero{background:#fff;border-bottom:1px solid var(--line);padding:26px 0 30px;
+  background-image:linear-gradient(180deg,#fff 0,#fff 55%,#f6efef 100%)}
+.hero-t{text-align:center;max-width:760px;margin:0 auto}
+.hero-t small{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border-bottom:2px solid var(--gold);padding-bottom:2px}
+.hero-t h1{margin:10px 0 6px;font-size:clamp(24px,5.4vw,36px);line-height:1.2;color:var(--red)}
+.hero-t p{margin:0;color:var(--muted);font-size:15px}
+.bot{max-width:860px;margin:20px auto 0;background:#fff;border:1px solid #d9caca;border-top:4px solid var(--red);
+  box-shadow:0 18px 40px -24px rgba(90,0,0,.45);display:flex;flex-direction:column}
+.bot-h{display:flex;align-items:center;gap:10px;padding:12px 14px;border-bottom:1px solid var(--line-2)}
+.bot-h svg{width:36px;height:36px;flex:none}
+.bot-h b{display:block;font-size:15px;line-height:1.2}
+.bot-h span{font-size:12.5px;color:var(--muted)}
+.pill{margin-left:auto;font-size:12px;font-weight:700;color:var(--warn);background:#fff4e0;border:1px solid #efd3a3;padding:3px 9px;white-space:nowrap}
+.bot-alert{display:flex;gap:10px;align-items:flex-start;background:var(--note);border-bottom:1px solid #eadb9c;padding:10px 14px;font-size:14px}
+.bot-alert svg{width:18px;height:18px;flex:none;margin-top:2px;color:var(--warn)}
+.msgs{padding:16px 14px;display:flex;flex-direction:column;gap:12px;font-size:15px;background:#fbfafa;min-height:220px}
+.m{max-width:86%;padding:10px 13px;border:1px solid var(--line);background:#fff}
 .m.u{align-self:flex-end;background:#eef3fb;border-color:#d2deef}
-.m small{display:block;margin-top:6px;color:var(--muted);font-size:12.5px}
-.m .ref{display:block;margin-top:6px;font-size:12.5px;border-left:3px solid var(--red);padding-left:8px;color:#333}
-.inp{display:flex;border-top:1px solid var(--line);background:#fff}
-.inp input{flex:1;min-width:0;border:0;padding:11px 12px;font:inherit;font-size:14px;background:#f5f5f5;color:var(--muted)}
-.inp button{border:0;background:#bdbdbd;color:#fff;font-weight:700;padding:0 16px;font:inherit;font-size:14px;cursor:not-allowed}
+.m small{display:block;margin-top:8px;color:var(--muted);font-size:12.5px;font-style:italic}
+.m .ref{display:block;margin-top:8px;font-size:13px;border-left:3px solid var(--red);padding-left:9px;color:#333}
+.sugg{display:flex;gap:8px;flex-wrap:wrap;padding:12px 14px 4px;border-top:1px solid var(--line-2)}
+.sugg button{font:inherit;font-size:13.5px;background:#fff;border:1px solid var(--line);padding:6px 11px;cursor:pointer;color:var(--ink)}
+.sugg button:hover{border-color:var(--red);color:var(--red)}
+.inp{display:flex;gap:8px;padding:12px 14px 14px}
+.inp label{flex:1;min-width:0;display:flex;align-items:center;gap:8px;border:2px solid #cfcfcf;background:#f6f6f6;padding:0 12px}
+.inp label svg{width:18px;height:18px;flex:none;color:#9a9a9a}
+.inp input{flex:1;min-width:0;border:0;padding:13px 0;font:inherit;font-size:16px;background:transparent;color:var(--muted);outline:none}
+.inp button{border:0;background:#b9b9b9;color:#fff;font:inherit;font-weight:700;font-size:15px;padding:0 20px;cursor:not-allowed}
+.bot-foot{border-top:1px solid var(--line-2);padding:9px 14px;font-size:12.5px;color:var(--muted)}
+.feats{max-width:860px;margin:16px auto 0;display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.feats div{font-size:13.5px;border-left:3px solid var(--red);background:#fff;padding:8px 10px}
+.feats b{display:block;font-size:14px}
 
 /* News grid */
 .filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
@@ -164,6 +180,9 @@ footer a{color:var(--gold)}
   .grid.two{grid-template-columns:1.1fr 1fr}
   .news{grid-template-columns:repeat(3,1fr)}
   .trio{grid-template-columns:repeat(3,1fr)}
+  .feats{grid-template-columns:repeat(4,1fr)}
+  .hero{padding:34px 0 38px}
+  .msgs{padding:18px 18px}
   footer .wrap{grid-template-columns:2fr 1fr}
   .unit b{font-size:22px}
 }
@@ -187,15 +206,59 @@ footer a{color:var(--gold)}
 </div></header>
 
 <nav class="nav" aria-label="Điều hướng"><div class="wrap">
-  <a href="#thong-bao" class="on">Thông báo</a>
-  <a href="#tro-ly">Trợ lý ảo</a>
+  <a href="#tro-ly" class="on">Trợ lý ảo</a>
+  <a href="#thong-bao">Thông báo</a>
   <a href="#tin-tuc">Tin tức – Hoạt động</a>
   <a href="#ho-tro">Hỗ trợ</a>
 </div></nav>
 
-<div class="noteline"><div class="wrap">
-  <b>Thông báo:</b> Chức năng hỏi đáp đang tạm dừng để nâng cấp hạ tầng bảo mật. Chuyên mục tin tức vẫn cập nhật bình thường.
-</div></div>
+<section class="hero" id="tro-ly"><div class="wrap">
+  <div class="hero-t">
+    <small>Trợ lý ảo hỏi đáp pháp luật PCCC và CNCH</small>
+    <h1>Tra cứu quy định PCCC bằng câu hỏi thông thường</h1>
+    <p>Câu trả lời dựa trên văn bản pháp luật, có ghi rõ văn bản, Điều, Khoản để đối chiếu.</p>
+  </div>
+
+  <div class="bot" aria-label="Khung hỏi đáp Trợ lý ảo PCCC">
+    <div class="bot-h">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 3 7 12v18c0 16 11 27 25 31 14-4 25-15 25-31V12z" fill="#9e1218"/><path d="M33 16c2 8 11 11 11 21a12 12 0 0 1-24 0c0-6 4-8 6-12 1 4 2 5 4 6-1-6 0-10 3-15z" fill="#f2c230"/></svg>
+      <div><b>Trợ lý ảo PCCC – KV24</b><span>Đội CC và CNCH Khu vực 24</span></div>
+      <span class="pill">Tạm dừng</span>
+    </div>
+    <div class="bot-alert">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="11" width="14" height="10"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+      <div><b>Đang bảo trì, nâng cấp hạ tầng bảo mật.</b> Chức năng hỏi đáp sẽ mở lại sau khi hoàn tất kiểm thử và thẩm định an toàn thông tin. <a href="#thong-bao">Xem thông báo</a></div>
+    </div>
+    <div class="msgs">
+      <div class="m">Chào anh/chị. Anh/chị cần hỏi về quy định phòng cháy, chữa cháy hoặc cứu nạn, cứu hộ nào?</div>
+      <div class="m u">Nhà trọ 10 phòng cần trang bị những gì về PCCC?</div>
+      <div class="m">Nhà trọ cần bảo đảm lối thoát nạn thông thoáng, trang bị bình chữa cháy, thiết bị báo cháy phù hợp và có nội quy, biển chỉ dẫn. Yêu cầu cụ thể phụ thuộc số tầng, diện tích và số người ở; anh/chị có thể liên hệ đơn vị PCCC trên địa bàn để được hướng dẫn trực tiếp.
+        <span class="ref">Luật PCCC và CNCH số 55/2024/QH15<br>Nghị định 105/2025/NĐ-CP</span>
+        <small>Nội dung minh họa, không có giá trị pháp lý.</small>
+      </div>
+    </div>
+    <div class="sugg">
+      <button type="button" onclick="locked(event)">Quán ăn có cần bình chữa cháy không?</button>
+      <button type="button" onclick="locked(event)">Kỹ năng thoát nạn khi cháy chung cư</button>
+      <button type="button" onclick="locked(event)">Hồ sơ PCCC của cơ sở kinh doanh gồm gì?</button>
+    </div>
+    <form class="inp" onsubmit="return locked(event)">
+      <label>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="11" width="14" height="10"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+        <input type="text" placeholder="Nhập câu hỏi về PCCC – tạm dừng để nâng cấp" aria-label="Ô nhập câu hỏi (đang tạm dừng)" readonly onclick="locked(event)">
+      </label>
+      <button type="submit">Gửi</button>
+    </form>
+    <div class="bot-foot">Dữ liệu: Luật PCCC và CNCH số 55/2024/QH15, Nghị định 105/2025/NĐ-CP và các thông tư, quy chuẩn, tiêu chuẩn kỹ thuật hiện hành.</div>
+  </div>
+
+  <div class="feats">
+    <div><b>Dựa trên văn bản</b>Chỉ trả lời theo văn bản đã kiểm duyệt</div>
+    <div><b>Có trích dẫn</b>Ghi rõ văn bản, Điều, Khoản</div>
+    <div><b>Cập nhật</b>Bổ sung khi có văn bản mới</div>
+    <div><b>Mọi thiết bị</b>Điện thoại, máy tính, không cần cài</div>
+  </div>
+</div></section>
 
 <main><div class="wrap">
 
@@ -231,38 +294,6 @@ footer a{color:var(--gold)}
       <ul class="latest" id="latest"></ul>
     </aside>
   </div>
-
-  <!-- Assistant -->
-  <section class="box" id="tro-ly" style="margin-top:20px">
-    <div class="box-h"><h2>Trợ lý ảo hỏi đáp pháp luật PCCC</h2></div>
-    <div class="box-b grid two">
-      <div class="about">
-        <p>Trợ lý ảo là công trình thi đua của Đội CC và CNCH Khu vực 24 trong phong trào <b>“Ba nhất: Kỷ luật nhất – Trung thành nhất – Gần dân nhất”</b> năm 2026, giúp người dân, doanh nghiệp tra cứu nhanh quy định về phòng cháy, chữa cháy và cứu nạn, cứu hộ bằng câu hỏi thông thường.</p>
-        <ul>
-          <li>Trả lời dựa trên văn bản pháp luật đã được cán bộ chuyên môn kiểm duyệt, không tự suy diễn.</li>
-          <li>Mỗi câu trả lời ghi rõ văn bản, Điều, Khoản để người hỏi đối chiếu.</li>
-          <li>Câu hỏi chưa có dữ liệu được ghi nhận để cán bộ bổ sung định kỳ.</li>
-          <li>Dùng được trên điện thoại và máy tính, không cần cài đặt.</li>
-        </ul>
-        <div class="src"><b>Dữ liệu tra cứu:</b> Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ số 55/2024/QH15; Nghị định số 105/2025/NĐ-CP; các thông tư, quy chuẩn, tiêu chuẩn kỹ thuật hiện hành – được cập nhật khi có văn bản mới hoặc văn bản hết hiệu lực.</div>
-      </div>
-      <div class="chat" aria-label="Minh họa giao diện hỏi đáp">
-        <div class="chat-h"><b>Hỏi đáp PCCC</b><span>Tạm dừng – đang nâng cấp</span></div>
-        <div class="msgs">
-          <div class="m">Chào anh/chị. Anh/chị cần hỏi về quy định PCCC nào?</div>
-          <div class="m u">Nhà trọ 10 phòng cần trang bị những gì về PCCC?</div>
-          <div class="m">Nhà trọ cần bảo đảm lối thoát nạn thông thoáng, trang bị bình chữa cháy, thiết bị báo cháy phù hợp và có nội quy, biển chỉ dẫn. Yêu cầu cụ thể phụ thuộc số tầng, diện tích và số người ở.
-            <span class="ref">Luật PCCC và CNCH số 55/2024/QH15<br>Nghị định 105/2025/NĐ-CP</span>
-            <small>Nội dung minh họa, không có giá trị pháp lý.</small>
-          </div>
-        </div>
-        <form class="inp" onsubmit="return locked(event)">
-          <input type="text" placeholder="Chức năng hỏi đáp đang tạm dừng" aria-label="Ô nhập câu hỏi (đang tạm dừng)" readonly onclick="locked(event)">
-          <button type="submit">Gửi</button>
-        </form>
-      </div>
-    </div>
-  </section>
 
   <!-- News -->
   <section class="box" id="tin-tuc" style="margin-top:20px">
